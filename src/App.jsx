@@ -10,7 +10,7 @@ function App() {
   useEffect(() =>{
       contextRef.current = canvasRef?.current?.getContext('2d');
       const img = new Image();
-      img.src = './src/assets/0001.jpg'
+      img.src = '/assets/0001.jpg'
       
       img.onload = () => {
         canvasRef.current.width = window.innerWidth*0.99;
@@ -25,7 +25,7 @@ function App() {
       }
 
       const getImageName = (index) => 
-        `./src/assets/${index.toString().padStart(4,"0")}.jpg`
+        `/assets/${index.toString().padStart(4,"0")}.jpg`
       
 
       const preLoadImages = () => {
